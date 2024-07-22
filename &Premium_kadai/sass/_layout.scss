@@ -1,0 +1,187 @@
+@use './mixins' as *;
+
+
+
+// ヘッダー
+.header {
+    background: #fff;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    &-logo img {
+        width: 160px;
+        margin: 20px 0 40px 20px;
+    }
+
+    &-gnav {
+        position: static;
+        width: 80%;
+        margin: 0 auto;
+        background-color: transparent;
+        flex-grow: 1;
+        align-items: start;
+        justify-content: start;
+    }
+
+    &-gnav li {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+
+    &-snsicon {
+        justify-content: center;
+        display: flex;
+        flex-grow: 0;
+        align-items: center;
+        padding: 20px;
+
+        & a {
+            padding: 8px;
+        }
+    }
+
+}
+
+//メインコンテンツ
+.container {
+    margin-left: 200px;
+    /* Full viewport height */
+}
+
+.main-visual {
+    height: 100vh;
+    height: calc(100vh - 60px);
+    background: url(../img/mv-bg@2x.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-visual__img {
+    // height: 80vh;
+    position: relative;
+    max-height: 700px;
+    width: auto;
+    transform: translateY(0);
+    display: block;
+    max-width: 100%;
+}
+
+.mvtext {    
+    position: absolute;
+    left: 4%;
+    bottom: 40px;
+    line-height: 1.5;
+    //background-color: #fff;
+}
+
+.mvtext-data {
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.mvtext-eng {
+    font-size: 32px;
+    font-weight: 400;
+    background-color: #fff;
+    padding: 3px;
+}
+
+.mvtext-jn {
+    font-size: 32px;
+    font-weight: 400;
+    background-color: #fff;
+    padding: 3px;
+}
+
+
+.backnamber-title {
+    padding: 2rem;
+    background-color: #f8f8f8;
+    font-size: .825rem;
+}
+
+
+//バックナンバー
+.bn-title {
+    font-size: large;
+}
+
+.bn-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-text {
+        margin-top: 40px;
+        font-size: small;
+        //line-height: 1.5;
+    }
+    
+    &-101 {
+        background-color: #ecf4f9;
+    }
+
+    &-100 {
+        background-color: #fbf3d2;
+    }
+
+    &-99 {
+        background-color: #f9f2eb;
+    }
+
+    &-98 {
+        background-color: #fae8c2;
+    }
+
+    &-97 {
+        background-color: #e2efe7;
+    }
+
+    &-96 {
+        background-color: #f2f5fb;
+    }
+}
+
+.bn-list li {
+    padding: 40px;
+    flex-basis: 100%;
+
+}
+
+.bn-list img {
+    display: block;
+    max-width: 300px;
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, .25),
+}
+
+.bn-list-text-data {
+    margin-bottom: .5em;
+    font-weight: 300;
+}
+
+.bn-list-text-number {
+    margin-bottom: .5em;
+    font-weight: 300;
+}
+
+.bn-list-text-copy {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+
+
